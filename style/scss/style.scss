@@ -1,0 +1,22 @@
+$white: #edf2f4;
+$grey: #8d99ae;
+$blueDark: #2b2d42;
+$redDark: #d90429;
+$redClrear: #ef233c;
+$globalFont: 'Lato', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
+.wrapper {
+  width: 90%;
+  height: auto;
+  padding: 1rem;
+  border-radius: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $white;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}

@@ -1,0 +1,47 @@
+<component name="CopyrightManager">
+  <settings>
+    <LanguageOptions name="HTML">
+      <option name="fileTypeOverride" value="3" />
+      <option name="addBlankBefore" value="true" />
+      <option name="fileLocation" value="2" />
+      <option name="separateBefore" value="true" />
+      <option name="separateAfter" value="true" />
+      <option name="lenBefore" value="99" />
+      <option name="lenAfter" value="99" />
+      <option name="box" value="true" />
+      <option name="filler" value="-" />
+    </LanguageOptions>
+    <LanguageOptions name="JavaScript">
+      <option name="fileTypeOverride" value="3" />
+      <option name="addBlankBefore" value="true" />
+      <option name="block" value="false" />
+      <option name="separateBefore" value="true" />
+      <option name="separateAfter" value="true" />
+      <option name="lenBefore" value="99" />
+      <option name="lenAfter" value="99" />
+      <option name="box" value="true" />
+      <option name="filler" value="-" />
+    </LanguageOptions>
+    <LanguageOptions name="SCSS">
+      <option name="fileTypeOverride" value="3" />
+      <option name="addBlankBefore" value="true" />
+      <option name="block" value="false" />
+      <option name="separateBefore" value="true" />
+      <option name="separateAfter" value="true" />
+      <option name="lenBefore" value="99" />
+      <option name="lenAfter" value="99" />
+      <option name="box" value="true" />
+      <option name="filler" value="*" />
+    </LanguageOptions>
+    <LanguageOptions name="__TEMPLATE__">
+      <option name="relativeBefore" value="false" />
+      <option name="addBlankBefore" value="true" />
+      <option name="separateBefore" value="true" />
+      <option name="separateAfter" value="true" />
+      <option name="lenBefore" value="99" />
+      <option name="lenAfter" value="99" />
+      <option name="box" value="true" />
+      <option name="filler" value="-" />
+    </LanguageOptions>
+  </settings>
+</component>

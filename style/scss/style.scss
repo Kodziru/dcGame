@@ -7,16 +7,261 @@ $globalFont: 'Lato', sans-serif;
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
 
+
+//Size and placement
+html, body {
+  min-width: 100%;
+  min-height: 100%;
+  //--
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper * {
+  text-align: center;
+  font-family: $globalFont;
+}
+
+.active {
+  background-color: rgba(193, 172, 180, 0.3);
+}
+
 .wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  //--
   width: 90%;
   height: auto;
+  //--
   padding: 1rem;
   border-radius: 12px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-color: $white;
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+}
+
+.p-details-style {
+  display: flex;
+  flex-direction: column;
+  gap: 11vh;
+  padding: 1rem;
+  width: 20%;
+  border-radius: 12px;
+}
+
+.player-score-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.player-name , .player-score {
+  font-weight: 100;
+}
+
+.player-name {
+  font-size: 2.2rem;
+  color: black;
+}
+
+.active .player-name {
+  font-weight: 400;
+}
+
+.active .player-name::after {
+  font-size: 42px;
+  color: $redClrear;
+}
+
+.player-score {
+  color:$redClrear;
+  font-size: 4.4rem;
+}
+
+.active  .player-current-score{
+  font-weight: 400;
+}
+
+.player-current-box {
+  background-color:$redClrear;
+  box-shadow: 0px 10px 50px rgba(239, 35, 60, 0.3);
+  border-radius: 3px;
+  padding: 0.6rem;
+  width: 160px;
+  align-self: center;
+}
+
+.player-current-label {
+  font-size: 16px;
+}
+
+.player-current-score {
+  font-size: 2rem;
+  color:$white;
+  font-weight: 300;
+}
+
+// CENTER DISPLAY *button* *Input* //
+
+.mid__show , .button__list {
+  display: grid;
+  grid-auto-flow: row;
+  justify-content: center;
+}
+
+.button__list {
+  height: 100%;
+}
+
+.button__list button , .btn-new {
+  width: 200px;
+  padding: 8px 0;
+  background:transparent;
+  border: none;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}
+
+
+.btn-roll , .btn-hold{
+  align-self: end;
+}
+// BTN Roll animation
+
+@keyframes rotateAnim {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.btn-roll:hover .ico-roll {
+  animation: rotateAnim 10s linear  0s 1 normal forwards;
+  transition: 0.3s ease-in all;
+}
+
+.btn-ico {
+  filter: brightness(0) saturate(100%) invert(16%) sepia(100%) saturate(2586%) hue-rotate(339deg) brightness(115%) contrast(95%);
+  width: 32px;
+  transition: 0.3s ease-in all;
+}
+
+
+
+button:hover .btn-ico {
+  transition: 0.3s ease-in all;
+  transform: scale(1.3);
+}
+
+.mid__show input{
+  align-self: end;
+  height: 24px;
+}
+
+
+.winner .player-name {
+  font-weight: 300;
+  color: #eb4d4d;
+}
+// Dice BOX
+
+
+//
+.final__score {
+  border-radius: 3px;
+  border: 1px solid $redDark;
+  transition: 0.3s ease-in all;
+  outline: none;
+}
+
+// DICE BOX
+
+
+.dice__box {
+  display: block;
+  margin: 0 auto;
+}
+
+.dice__dot {
+  z-index: 100;
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: $redDark;
+  border-radius: 100%;
+  box-shadow: $blueDark inset 0 0 3px 1px;
+}
+
+.dice__style {
+  z-index: 100;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  width: 80px;
+  height: 80px;
+  border: 1px solid $redClrear;
+  border-radius: 6px;
+  background-color: $white;
+  box-shadow: $blueDark 0 0 3px 1px;
+}
+
+.six-dot {
+  grid-template-columns: 50% 50%;
+}
+
+.five-dot {
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+        "a a"
+        "b b"
+        "c c";
+  //dot center
+}
+
+.four-dot {
+  grid-template-columns: 50% 50%;
+}
+
+.three-dot {
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+        "a e"
+        "b b"
+        "r c";
+
+  //dot start
+  //dot center
+  //dot end
+}
+.two-dot {
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas:
+        "b b"
+        "e e"
+        "b b";
+  //dot center
+}
+.one-dot {
+  //dot center
+}
+
+.dot__start {
+  justify-items: flex-start;
+  grid-area: a;
+}
+
+.dot__center {
+  grid-area: b;
+}
+
+.dot__end {
+  grid-area: c;
 }
